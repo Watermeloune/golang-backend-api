@@ -3,6 +3,7 @@ package router
 import (
 	"net/http"
 
+	h "github.com/Watermeloune/golang-backend-api/handlers"
 	"github.com/labstack/echo"
 )
 
@@ -12,5 +13,6 @@ func SetRoutes(e *echo.Echo) *echo.Echo {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
 
+	e.GET("/test", h.TestHandler)
 	return e
 }
