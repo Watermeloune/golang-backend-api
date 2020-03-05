@@ -6,7 +6,7 @@ import (
 	"github.com/labstack/echo"
 )
 
-func set_routes(e *echo.Echo) *echo.Echo {
+func SetRoutes(e *echo.Echo) *echo.Echo {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
